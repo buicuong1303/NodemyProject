@@ -40,7 +40,7 @@ class User extends UserModel {
   static getInfoUser() {
     let infoUsers = User.find({});
     if (!infoUsers) return resolve({ error: true, message: 'can not get user' });
-    return resolve({ error: false, infoUser });
+    return resolve({ error: false, data: infoUsers });
   }
 }
 exports.USER_MODEL = User;
